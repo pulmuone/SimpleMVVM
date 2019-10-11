@@ -27,7 +27,7 @@ namespace SimpleMVVM.Views
             foreach (var item in Navigation.NavigationStack)
             {
 
-                //중복 클릭 방지
+                //중복 클릭 방지 
                 if (item.BindingContext != null && item.BindingContext.ToString().EndsWith("InboundItemsViewModel"))
                 {
                     return;
