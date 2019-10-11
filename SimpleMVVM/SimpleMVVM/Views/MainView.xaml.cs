@@ -28,7 +28,7 @@ namespace SimpleMVVM.Views
             {
 
                 //중복 클릭 방지 
-                if (item.BindingContext != null && item.BindingContext.ToString().EndsWith("InboundItemsViewModel"))
+                if (item.ToString().EndsWith("InboundItemsViewModel"))
                 {
                     return;
                 }
