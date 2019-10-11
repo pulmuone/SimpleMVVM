@@ -28,8 +28,9 @@ namespace SimpleMVVM.Views
             {
 
                 //중복 클릭 방지 
-                if (item.ToString().EndsWith("InboundItemsViewModel"))
+                if (item.ToString().EndsWith("InboundView"))
                 {
+                    Console.WriteLine("----------> Page중복 방지 : InboundView");
                     return;
                 }
             }
