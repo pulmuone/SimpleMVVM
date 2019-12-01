@@ -29,8 +29,9 @@ namespace SimpleMVVM.ViewModels
             List<InboundModel> lst = new List<InboundModel>
             {
                 new InboundModel{ InvoiceNumber ="ABC1234", InboundDate ="2019-10-11",  VenderCode="Z101", VenderName="매입업체 Z101", Remark ="긴급 주문입니다." },
-                new InboundModel{ InvoiceNumber ="ABC1235", InboundDate ="2019-10-11",  VenderCode="Z102", VenderName="매입업체 Z102", Remark ="영업팀 확인 요망"  },
-                new InboundModel{ InvoiceNumber ="ABC1236", InboundDate ="2019-10-11",  VenderCode="Z103", VenderName="매입업체 Z103", Remark = string.Empty }
+                new InboundModel{ InvoiceNumber ="ABC1235", InboundDate ="2019-10-12",  VenderCode="Z102", VenderName="매입업체 Z102", Remark ="영업팀 확인 요망"  },
+                new InboundModel{ InvoiceNumber ="ABC1236", InboundDate ="2019-10-13",  VenderCode="Z103", VenderName="매입업체 Z103", Remark = string.Empty },
+                new InboundModel{ InvoiceNumber ="ABC1237", InboundDate ="2019-10-14",  VenderCode="Z104", VenderName="매입업체 Z104", Remark = string.Empty }
             };
 
             InboundList.AddRange(lst);

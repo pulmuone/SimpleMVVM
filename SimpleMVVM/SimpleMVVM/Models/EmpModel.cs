@@ -49,7 +49,7 @@ namespace SimpleMVVM.Models
                 if (_grade == value || value == null) return;
                 _grade = value;
                 GradeCode = _grade.Code;
-                OnPropertyChanged("Grade");
+                OnPropertyChanged();
             }
         }
 
@@ -62,7 +62,7 @@ namespace SimpleMVVM.Models
                 this._gradeCode = value;
                 var row = lst.FirstOrDefault(t => t.Code == value);
                 Grade = row;
-                OnPropertyChanged("GradeCode");
+                OnPropertyChanged();
                 //SelectedRow = lst.IndexOf(row);
             }
         }
