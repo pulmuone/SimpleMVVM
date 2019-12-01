@@ -21,22 +21,26 @@ namespace SimpleMVVM.Views
 
         private async void listItem_Tapped(object sender, EventArgs e)
         {
-            InboundModel selectedItem = (InboundModel)(BindingContext as InboundViewModel).InboundList.Where(i => i.InvoiceNumber == ((TappedEventArgs)e).Parameter).FirstOrDefault();
-            this.collectionView.SelectedItem = selectedItem;
+            //InboundModel selectedItem = (InboundModel)(BindingContext as InboundViewModel).InboundList.Where(i => i.InvoiceNumber == ((TappedEventArgs)e).Parameter).FirstOrDefault();
+            //this.collectionView.SelectedItem = selectedItem;
 
-            foreach (var item in Navigation.NavigationStack)
-            {
-                //Console.WriteLine("Title => " + item.BindingContext);
-
-                //중복 클릭 방지
-                if (item.BindingContext !=null && item.BindingContext.ToString().EndsWith("InboundItemsViewModel"))
-                {
-                    return;
-                }
-            }
 
             //await Navigation.PushAsync(new InboundItemsView(selectedItem));
             //await Navigation.PushAsync(new InboundItemsView());
         }
+
+        private void collectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            foreach (var item in e.PreviousSelection)
+            {
+                Console.WriteLine((item as InboundModel).InvoiceNumber);
+            }
+
+            foreach (var item in e.CurrentSelection)
+            {
+                Console.WriteLine((item as InboundModel).InvoiceNumber);
+            }
+        }
+
     }
 }
